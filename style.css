@@ -1,0 +1,380 @@
+/********************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL
+ * 2. LAYOUT
+ * 3. MENU
+ * 4. MAIN
+ * -- 4a. Articles
+ * -- 4b. Gallery
+ * 5. MEDIA QUERIES
+ */
+html{
+    box-sizing: border-box;
+}
+body {
+  background-color: #161616;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-logo {
+  background-color: #000;
+  width: 130px;
+  height: 60px;
+  border-radius: 100px;
+  display: flex;
+  position: absolute;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+  left: 2.5%;
+  bottom: -77.7px;
+}
+.site-logo-img {
+  width: 100px;
+}
+/*oc-buttion, this is the open & close button on spblugy menu*/
+
+/*class created to target the site-logo on the nav menu*/
+.menu-collapse-button {
+  background-color: #2c2b2e;
+  width: 65px;
+  height: 65px;
+  border-radius: 100px;
+  display: flex;
+  position: absolute;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 9000;
+  right: 3%;
+  bottom: -80.7px;
+  box-shadow: 0px 2px 5px 2px #00000050;
+}
+
+.menu-collapese-btn-icon {
+  width: 30px;
+  height: 30px;
+}
+.menu-collapse-button:hover {
+  background-image: linear-gradient(
+    50deg,
+    #1b1a1a7a,
+    #0f0f0f92,
+    #1b1a1a94,
+    #0f0f0f94,
+    #2726266b
+  );
+}
+
+/*SPBLUGY menu this is the  manin container(nav) holding
+all menu elements
+Note: to further tint and control the see through effect 
+of the spblugy-shell, i added a transperant to the 
+spblugy-menu element*/
+.spblugy-menu {
+  background-color: #0d0c0d8a;
+  border-radius: 60px;
+  width: 98%;
+  height: 90px;
+  display: flex;
+  position: fixed;
+  top: 10px;
+  margin: 0;
+  z-index: 900;
+}
+
+/*menu-icons-container is the container(<nav>) holding all menu icons and text
+Note:this layer also hold the transperent glass effect*/
+.menu-background-color {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid #55555505;
+  background-color: #0f0f0f;
+  display: flex;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  box-shadow: 0px 3px 10px #0000006a;
+  border-radius: 60px;
+  backdrop-filter: blur(8px);
+  background-image: linear-gradient(
+    50deg,
+    #1b1a1a7a,
+    #0f0f0f92,
+    #1b1a1a94,
+    #0f0f0f94,
+    #2726266b
+  );
+}
+
+/*spblugy-icon, this container(<ul>)   
+holding the spblugy-icons-shell/ all nav icons and text*/
+.menu-icon-tray {
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 12%;
+  z-index: 204;
+}
+
+/*spblugy-icons-shell this is the container(li) holding
+the <ul> holding all nav icons*/
+.menu-icon-nd-name-container {
+  width: auto;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  z-index: 203;
+  transform: translateY(-7%);
+  gap: 1px;
+}
+
+/*spblugy-icons-txt this is the container(div) holding
+label text for all nav icons*/
+.menu-icons-txt {
+  width: 85px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.07rem;
+  margin: 0%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/*class created to target spblugy menu icons*/
+.menu-icons {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(#000);
+  filter: opacity(80.8%);
+}
+
+/*class created to target visted link behavour on nav menu*/
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #979292;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.07rem;
+  margin: 0%;
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/*mobile menu*/
+
+/*SPBLUGY menu this is the  manin container(nav) holding
+all menu elements
+Note: to further tint and control the see through effect 
+of the spblugy-shell, i added a transperant to the 
+spblugy-menu element*/
+.spblugy-mobile-menu {
+  background-color: #0d0c0d8a;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 100%;
+  /*height: fit-conten;* full menu size/*/
+  height: 90px;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  z-index: 900;
+}
+
+/*menu-icons-container is the container(<nav>) holding all menu icons and text
+Note:this layer also hold the transperent glass effect*/
+.menu-background-color-mb {
+  width: 100%;
+  height: 100%;
+  border: 0.5px solid #55555505;
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  z-index: 200;
+  box-shadow: 0px 3px 10px #0000006a;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  backdrop-filter: blur(8px);
+  background-image: linear-gradient(
+    50deg,
+    #1b1a1a7a,
+    #0f0f0f92,
+    #1b1a1a94,
+    #0f0f0f94,
+    #2726266b
+  );
+}
+
+/*spblugy-icon, this container(<ul>)   
+holding the spblugy-icons-shell/ all nav icons and text*/
+.menu-icon-tray1-mb {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 1%;
+  z-index: 204;
+}
+.menu-icon-tray2-mb {
+  width: auto;
+  height: auto;
+  display: none;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 12%;
+  z-index: 204;
+}
+
+/*spblugy-icons-shell this is the container(li) holding
+the <ul> holding all nav icons*/
+.menu-icon-nd-name-container-mb {
+  width: auto;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  z-index: 203;
+  transform: translateY(-7%);
+  gap: 1px;
+}
+
+/*spblugy-icons-txt this is the container(div) holding
+label text for all nav icons*/
+.menu-icons-txt-mb {
+  width: 85px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  letter-spacing: 0.07rem;
+  margin: 0%;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/*class created to target spblugy menu icons*/
+.menu-icons-mb {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(#000);
+  filter: opacity(80.8%);
+}
+
+/*class created to target visted link behavour on nav menu*/
+.nav-link-mb {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #979292;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.07rem;
+  margin: 0%;
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* 5. MEDIA QUERIES */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .spblugy-menu {
+        display: none;
+      }
+.spblugy-mobile-menu {
+    display: flex;
+  }
+
+
+
+
+
+}
+
+/* Phone */
+@media screen and (max-width: 480px) {
+  /* Stack menu links vertically */
+
+  .spblugy-menu {
+    display: none;
+  }
+
+  .spblugy-mobile-menu {
+    display: flex;
+  }
+
+  .site-logo {
+    width: 100px;
+    height: 50px;
+    left: 5px;
+    bottom: -54px;
+  }
+
+  .site-logo-img {
+    width: 80px;
+  }
+  .oc-button {
+    display: none;
+  }
+}
